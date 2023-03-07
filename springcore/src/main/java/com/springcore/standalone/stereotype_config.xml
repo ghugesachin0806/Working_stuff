@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- standalone -->
+	<util:list list-class="java.util.LinkedList" id="list1">
+		<value>Aman</value>
+		<value>Chaman</value>
+		<value>Daman</value>
+		<value>Thasan</value>
+	</util:list>
+	<util:map map-class="java.util.HashMap" id="map1">
+		<entry key="sachin" value="88" />
+		<entry key="aman" value="78" />
+		<entry key="Ran" value="55" />
+	</util:map>
+	<!-- beans -->
+	<bean class="com.springcore.standalone.Person" name="person1">
+		<property name="friends" ref="list1" />
+		<property name="fees" ref="map1" />
+	</bean>
+</beans>
