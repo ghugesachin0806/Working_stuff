@@ -1,4 +1,4 @@
-package com.hibernate_project;
+package com.project_hibernate;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
